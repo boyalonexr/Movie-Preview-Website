@@ -1,7 +1,7 @@
 const input = document.getElementById("input");
 const searchBtn = document.getElementById("search-btn");
 const mainContainer = document.getElementById("main-container");
-const apikey = "ae246066";
+const apikey = "9e5d9c14";
 
 let moviesArr = [];
 let moviesArr2 = []
