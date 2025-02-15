@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", serif;
+}
+
+/* Header */
+
+.header-container {
+  position: relative;
+  background-image: url(./Pictures/background-image-edit.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 8.75rem;
+  padding: 0 1rem;
+}
+
+.header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.header-text {
+  position: relative;
+  top: 0.9375rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text h1, a {
+  z-index: 1;
+}
+
+.header-text h1 {
+  font-weight: 800;
+  color: white; 
+}
+
+ .header-text a, 
+ .empty-text a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.empty-text h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.empty-text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+/* Main */
+main, .movie-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  min-height: 80vh;
+  background-color: #121212;
+  color: white;
+  padding: 0 1rem;
+  /* border: 1px solid red; */
+}
+
+.movie-div {
+  position: fixed;
+  flex-direction: column;
+  height: 100px;
+  width: 150px;
+}
+
+.movie-div .fa-film {
+  font-size: 3rem;
+  color: #2E2E2F;
+}
+
+.movie-div p {
+  color: #2E2E2F;
+  font-weight: 700;
+}
+
+.section-container {
+  display: flex;
+  /* margin-top: 3rem; */
+  padding: 2rem 0 1rem;
+  border-bottom: 1.5px solid #2C2C2C;
+}
+
+section:nth-child(1) {
+  padding-top: 3rem;
+}
+
+img {
+  width: 100px;
+  height: 154px;
+  border-radius: 2.30px;
+}
+
+.section-contents {
+  padding-left: 12px;
+  /* border: 1px solid red; */
+  margin: 8px 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  display: flex;
+  align-items: center;
+}
+
+.section-one {
+  gap: 7px;
+}
+
+.section-one h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.section-one .fa-star {
+  color: #FEC654;
+  font-size: 10px; 
+}
+
+.section-one p {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.section-two {
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.section-two h3 {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.section-two h3:nth-child(2) {
+  flex-wrap: wrap;
+  padding: 5px;
+
+}
+
+.section-btn {
+  display: inline-block;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+  border: none;
+}
+
+.section-three p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #A5A5A5;
+}
+
+.empty-text {
+ font-weight: 700;
+ font-size: 18px;
+ color: #787878;
+ text-align: center;
+}
+
+.fa-ban {
+  color: red;
+}
+
+@media(min-width: 690px) {
+  body {
+    background-color: #121212;
+  }
+
+  header {
+  background-image: url(./Pictures/background-image-edit.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+
+  .header-container {
+    background-image: none;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .main-container {
+    max-width: 70%; 
+    margin: 0 auto;
+  }
+
+  .header-text,
+  .section-container {
+    padding: 0 1.5rem 0 0.9rem;
+  }
+
+  .header-text h1 {
+    font-size: 2rem; 
+    font-weight: 800;
+  }
+
+  .header-text a {
+    font-size: 1.3rem; 
+  }
+
+  /* Input adjustments */
+  input {
+    min-width: 80%;
+  }
+
+  .input-btn {
+    width: 17%;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-div {
+    width: 50%;
+    margin: 1.5rem 0;
+  }
+
+  .section-contents {
+    padding: 2rem;
+  }
+
+  .section-one h2 {
+    font-size: 1.25rem; /* Slightly smaller font size */
+  }
+
+  .section-two {
+    margin: 1rem 0;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .section-one p,
+  .section-two h3 {
+    font-size: 0.875rem;
+  }
+}
