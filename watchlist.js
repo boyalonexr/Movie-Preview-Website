@@ -3,15 +3,21 @@ const emptyText = document.getElementById("empty-text");
 
 function renderSavedMovies() {
   mainContainer.style.flexDirection = "column";
-  emptyText.style.display = "none";
-
   const savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || [];
 
   // Clear previous movie content
   mainContainer.innerHTML = "";
 
   if (savedMovies.length === 0) {
-    emptyText.style.display = "block";  // Show empty text if no saved movies
+    mainContainer.innerHTML = `
+      <div id="empty-text" class="empty-text">
+      <h2>Your watchlist is looking a little empty...</h2>
+      <a href="./index.html">
+        <i class="fa-solid fa-circle-plus"></i>
+        <p>Lets add some movies!</p>
+      </a>
+    </div>
+    `
   }
 
   savedMovies.forEach((movie) => {

@@ -37,7 +37,7 @@ function generateMovies() {
       </div>
       `;
       }
-      input.value = "";
+      // input.value = "";
     });
 }
 
