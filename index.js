@@ -10,7 +10,7 @@ let moviesArr2 = []
 
 function generateMovies() {
   const searchQuery = input.value.trim();
-  const url = `http://www.omdbapi.com/?apikey=${apikey}&s=${searchQuery}`;
+  const url = `https://www.omdbapi.com/?apikey=${apikey}&s=${searchQuery}`;
 
   fetch(url)
     .then((res) => res.json())
@@ -49,7 +49,7 @@ function moviesDetails() {
 
   // Loop through the movies array
   moviesArr.forEach((movies) => {
-    const url = `http://www.omdbapi.com/?apikey=${apikey}&i=${movies.MovieId}`;
+    const url = `https://www.omdbapi.com/?apikey=${apikey}&i=${movies.MovieId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
